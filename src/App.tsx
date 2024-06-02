@@ -1,4 +1,5 @@
 import AuthLayout from "./components/layout/AuthLayout";
+import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import "./styles/index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="signup" element={<Signup />} />
-            {/* <Route path="/login" element={<Login />} /> */}
+            <Route path="login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>
