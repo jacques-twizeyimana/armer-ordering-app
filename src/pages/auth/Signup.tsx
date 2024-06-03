@@ -3,6 +3,7 @@ import { SignupFields, signupSchema } from "../../types/validation/signup";
 import Input from "../../components/atoms/Input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Signup() {
@@ -78,6 +79,12 @@ export default function Signup() {
             )}
           </button>
         </div>
+        <p className="text-gray-500 text-sm pt-4">
+          Already have an account?{" "}
+          <Link to="/auth/login" className="text-gray-800">
+            Login
+          </Link>
+        </p>
       </form>
     </div>
   );

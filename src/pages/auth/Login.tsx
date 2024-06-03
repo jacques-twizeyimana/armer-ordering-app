@@ -3,6 +3,7 @@ import { LoginFields, loginSchema } from "../../types/validation/signup";
 import Input from "../../components/atoms/Input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Login() {
@@ -60,6 +61,7 @@ export default function Login() {
         <div className="pt-4">
           <button
             disabled={isSaving}
+            type="submit"
             className="block w-full py-3 text-base rounded text-center px-4 bg-gray-800 text-white"
           >
             {isSaving ? (
@@ -71,9 +73,9 @@ export default function Login() {
         </div>
         <p className="text-gray-500 text-sm pt-4">
           Don't have an account?{" "}
-          <a href="/signup" className="text-gray-800">
+          <Link to="/auth/signup" className="text-gray-800">
             Sign up
-          </a>
+          </Link>
         </p>
       </form>
     </div>
